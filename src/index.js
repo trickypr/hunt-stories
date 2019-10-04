@@ -1,3 +1,6 @@
+import {decode} from 'ya-base62'
+import {get} from 'axios'
+
 // * Everything in URL is base62 encoded
 
 const getQueryParam = param => {
@@ -12,9 +15,6 @@ const getQueryParam = param => {
 const page = getQueryParam('23b4tx')
 
 ;(async () => {
-  const { decode } = await import('ya-base62')
-  const { get } = await import('axios')
-  
   let pageContents = await get(`./pages/${decode(page)}`)
 
   const marked = await import('marked')
