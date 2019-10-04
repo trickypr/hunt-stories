@@ -1,5 +1,5 @@
-import {decode, encode} from 'base62.io'
-import {get} from 'axios'
+let { decode } = require('base62.io')
+let { get } = require('axios')
 
 import './index.scss'
 
@@ -18,7 +18,9 @@ const page = getQueryParam('23b4tx')
 
 ;(async () => {
   const pageURL = `./pages/${decode(page)}`
+  decode = null
   let pageContents = await get(pageURL)
+  get = null
 
   const marked = await import('marked')
   
