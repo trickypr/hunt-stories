@@ -1,0 +1,30 @@
+name: GHP
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+    - name: Install Dependancies
+      run: |
+        npm install
+      env:
+        CI: true
+    - name: Build
+      run: |
+        npm run build
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.4.0
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.GHP_DEPLOY }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./build
