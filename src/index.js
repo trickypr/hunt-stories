@@ -1,4 +1,4 @@
-import {decode} from 'ya-base62'
+import {decode} from 'base62.io'
 import {get} from 'axios'
 
 // * Everything in URL is base62 encoded

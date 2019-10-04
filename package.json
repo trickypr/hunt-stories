@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
-    "marked": "^0.7.0",
-    "ya-base62": "^1.0.0"
+    "base62.io": "^1.0.0",
+    "marked": "^0.7.0"
   }
 }
