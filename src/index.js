@@ -1,8 +1,6 @@
 let { decode } = require('base62.io')
 let { get } = require('axios')
 
-import './index.scss'
-
 // * Everything in URL is base62 encoded
 
 const getQueryParam = param => {

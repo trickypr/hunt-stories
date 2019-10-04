@@ -5,12 +5,13 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "mkdir build && mkdir build/pages && parcel build src/index.html --public-url ./ --no-source-maps && cp dist/* build && cp pages/*.md build/pages/",
+    "build": "mkdir build && mkdir build/pages && parcel build src/index.html --public-url ./ --no-source-maps && cp dist/**/* build && cp pages/*.md build/pages/",
     "serve": "parcel src/index.html -p 8080"
   },
   "author": "trickypr",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
+    "node-sass": "^4.12.0",
     "parcel-bundler": "^1.12.3",
     "sass": "^1.23.0"
   },
