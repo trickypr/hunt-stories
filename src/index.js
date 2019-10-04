@@ -16,8 +16,6 @@ const getQueryParam = param => {
 
 const page = getQueryParam('23b4tx')
 
-console.log(encode('Printers.md'))
-
 ;(async () => {
   const pageURL = `./pages/${decode(page)}`
   let pageContents = await get(pageURL)
