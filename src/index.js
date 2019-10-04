@@ -24,5 +24,8 @@ const page = getQueryParam('23b4tx')
   
   pageContents = marked(pageContents.data)
   document.getElementById('app').innerHTML = pageContents
+
+  const title = `The Hunt | ${document.getElementsByTagName('h1')[0].innerText}`
+  document.getElementsByTagName('title')[0].innerText = title
 })()
 
