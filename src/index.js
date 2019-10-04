@@ -1,5 +1,7 @@
-import {decode} from 'base62.io'
+import {decode, encode} from 'base62.io'
 import {get} from 'axios'
+
+import './index.scss'
 
 // * Everything in URL is base62 encoded
 
@@ -14,8 +16,11 @@ const getQueryParam = param => {
 
 const page = getQueryParam('23b4tx')
 
+console.log(encode('Printers.md'))
+
 ;(async () => {
-  let pageContents = await get(`./pages/${decode(page)}`)
+  const pageURL = `./pages/${decode(page)}`
+  let pageContents = await get(pageURL)
 
   const marked = await import('marked')
   
