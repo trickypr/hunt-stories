@@ -7,14 +7,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
 
     steps:
     - uses: actions/checkout@v1
     - name: Install Node
       uses: actions/setup-node@v1
       with:
-        node-version: lts
+        node-version: '10.x'
     - name: Install Dependancies
       run: |
         npm install
