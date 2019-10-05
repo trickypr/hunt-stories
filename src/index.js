@@ -1,4 +1,4 @@
-let { decode } = require('base62.io')
+let { decode, encode } = require('base62.io')
 let { get } = require('axios')
 
 // * Everything in URL is base62 encoded
@@ -13,6 +13,8 @@ const getQueryParam = param => {
 }
 
 const page = getQueryParam('23b4tx')
+
+console.log(encode('Peculiarities.md'))
 
 ;(async () => {
   const pageURL = `./pages/${decode(page)}`

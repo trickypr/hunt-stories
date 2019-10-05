@@ -1,5 +1,6 @@
 body {
   background: #383c45;
+  color: white;
   margin: 0;
 }
 
@@ -17,14 +18,25 @@ body {
   font-family: "Zilla Slab", serif;
 }
 
-p {
-  color: white;
+p, li {
   font-size: 1.5rem;
 }
 
-h1 {
+h1, h2 {
+  color: #383c45;
   background: white;
   margin: 0;
+}
+
+h2 {
+  color: #383c45;
+  background: white;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+h1 {
   padding: 2rem;
   font-size: 4rem;
   line-height: 69px;

@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "mkdir build && mkdir build/pages && parcel build src/index.html --public-url ./ --no-source-maps && cp dist/**/* build && cp pages/*.md build/pages/",
+    "build": "mkdir build && mkdir build/pages && parcel build src/index.html --public-url ./ --no-source-maps && cp -a dist/. build && cp pages/*.md build/pages/",
     "serve": "parcel src/index.html -p 8080"
   },
   "author": "trickypr",
